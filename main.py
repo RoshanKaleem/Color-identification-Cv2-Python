@@ -29,7 +29,7 @@ def get_colors(image, numberofcolors, showchart):
     hex_colors = [RGB2HEX(ordered_colors[i]) for i in counts.keys()]
     rgb_colors = [ordered_colors[i] for i in counts.keys()]
 
-    if (showchart):
+    if showchart:  # show chart bool
         plt.figure(figsize=(8, 6))
         plt.pie(counts.values(), labels=hex_colors, colors=hex_colors)
         plt.show()
